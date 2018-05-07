@@ -32,9 +32,7 @@ def handle_messages():
 
 
 def messaging_events(payload):
-    """Generate tuples of (sender_id, message_text) from the
-    provided payload.
-    """
+
     data = json.loads(payload)
     messaging_events = data["entry"][0]["messaging"]
     for event in messaging_events:
@@ -45,8 +43,6 @@ def messaging_events(payload):
 
 
 def send_message(token, recipient, text):
-    """Send the message text to recipient with id recipient.
-    """
 
     r = requests.post("https://graph.facebook.com/v2.6/me/messages",
                       params={"access_token": token},
