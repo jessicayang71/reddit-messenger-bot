@@ -58,14 +58,14 @@ if __name__ == '__main__':
             break
 
         ask_user = raw_input("Are you having a bad day? Y or N ?")
-        if ask_user == "Y":     
+        if ask_user == "Y":
             print("I have %i memes to cheer you up" % (number_pictures))
             check = raw_input("Do you want a meme? Y or N ?")
             if check == "Y":
                 webbrowser.open(picture_day)
                 list_urls.remove(picture_day)
                 picture_day = random_url(list_urls)
-                print("I need a short break")
+                print("I need a little break")
                 time.sleep(5)
 
             else:
@@ -73,5 +73,5 @@ if __name__ == '__main__':
                 break
 
         else:
-            print("That's the spirit! Have a good one!")
+            print("Nice, glad I could help :)")
             break
